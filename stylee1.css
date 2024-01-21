@@ -1,0 +1,354 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color:   rgb(119, 119, 159);
+  width: 100%;
+}
+.hamburger-menu{
+  display: none;
+}
+#menu_toogle{
+  opacity: 0;
+}
+.menu_btn{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu_btn>span,
+.menu_btn>span::before,
+.menu_btn>span::after{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu_btn>span::before{
+  content: ' ';
+  top:-8px;
+}
+.menu_btn>span::after{
+  content: ' ';
+  top:8px;
+}
+.menu_box{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #e6e3ed;
+  box-shadow: 1px 0px 6px rgb(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+.menu_item{
+  display: block;
+  padding: 12px 24px;
+  color: rgb(12, 12, 12);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu_item :hover{
+  background-color: #273451;
+}
+#menu_toggle:checked~.menu_btn>span{
+  transform: rotate(45deg);
+}
+#menu_toggle:checked~.menu_btn>span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu_toggle:checked~.menu_btn>span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu_toggle:checked~.menu_box{
+  visibility: visible;
+  left: 0;
+}
+.menu li {
+	list-style-type: none;
+}
+.menu{
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.nav{
+  display: block;
+}
+.menu a {
+  padding: 30px;
+  color: #000;
+  text-decoration: none;
+}
+.menu a:hover {background:  rgb(119, 119, 159);}
+.phon{
+ display: inline-flex;
+}
+.head{
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+.photo1{
+  width: 80%;
+  margin: -7px 0px 0px -8px;
+}
+.I_stay{
+  margin-top: 260px;
+}
+.Lviv{
+  margin-top: 260px;
+}
+
+
+.first{
+  margin-top: 47px;
+  margin-left: 60px;
+}
+.subtitle{
+  margin-top: 47px;
+}
+.block{
+  display: inline-flex;
+  padding-right: 3%;
+}
+.the_author{
+  text-align: justify;
+  padding-right: 5%;
+}
+.collage{
+  padding-top: 130px;
+}
+
+.second{
+  margin-top: 65px;
+  margin-left: 55px;
+}
+.collage2_1, .collage2{
+  display: flex;
+  text-align: center;
+  margin-left: 25px;
+  transition: transform 0.40s;
+}
+.collage2 :hover{
+  transform: scale(1.1);
+}
+.collage2_1 :hover{
+  transform: scale(1.1);
+}
+
+
+.footer{
+  background-color: rgb(78, 77, 77);
+  padding-top: 40px;
+  padding-left: 55px;
+  margin-bottom: -18px;
+  margin-left: -10px;
+}
+.my{
+  margin-bottom: 50px;
+}
+.most{
+  
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  padding-bottom: 20px;
+}
+
+.protection{
+  margin-top: 80px;
+  margin-left: 80%;
+  font-size: large;
+  padding-bottom: 15px;
+}
+@media only screen and (max-width:1200px){
+  h1{
+    font-size: 22px;
+  }
+  .head{
+    padding-left: 40px;
+  }
+  .Lviv{
+    margin-top: 240px;
+  }
+  .image_12, .image_15, .image_14{
+    width: 400px;
+  }
+  .collage2_1, .collage2{
+    display: block;
+    margin-left: -40px;
+    transition: transform 0.40s;
+  }
+  .image_9{
+    height: 560px;
+  }
+  .image_8{
+    height: 540px;
+    width: 460px;
+  }
+  .image_10, .image_6{
+    display: none;
+  }
+  .protection{
+    margin-left: 70%;
+  }
+  
+  
+  
+}
+@media only screen and (max-width:768px){
+  .hamburger-menu{
+    display: block;
+  }
+  .menu{
+    display: none;
+  }
+  .phon{
+    margin-top: -20px;
+  }
+  .photo1{
+    width: 500px;
+    height: 500px;
+  }
+  .head{
+    margin-left:-40px ;
+  }
+  h1{
+    font-size: 20px;
+  }
+  .I_stay{
+    margin-top: 150px;
+  }
+  .Lviv{
+    margin-top: 200px;
+  }
+  .collage{
+    margin-top: -100px;
+    margin-left: 100px;
+  }
+  .block{
+    display: grid;
+  }
+  .collage2, .collage2_1{
+    display: grid;
+    margin-left: 70px;
+  }
+  .image_5, .image_8, .image_9, .image_4{
+    width: 500px;
+  }
+  .protection{
+    margin-left: 60%;
+  }
+  
+}
+@media only screen and (max-width:430px){
+  .photo1{
+    display: none;
+  }
+  .the_author{
+    margin-left: -20px;
+  }
+  .image_14{
+    width: 320px;
+  }
+  h1{
+    font-size: 18px;
+  }
+  .head{
+    margin-left: -5px;
+    text-align: center;
+    background-image: url(img/photo_1.avif);
+    background-size: cover;
+    padding-right: 90px;
+
+    color:  rgb(88, 88, 135);
+  }
+  .subtitle{
+    margin-left: -20px;
+  }
+  .block{
+    margin-left: -20px;
+  }
+  .collage{
+    margin-left: 10px;
+  }
+  .soul{
+    margin-left: -50px;
+  }
+ 
+  .image_15, .image_12{
+    width: 320px;
+  }
+  .image_8, .image_9{
+    height: 400px;
+  }
+  .image_5, .image_8, .image_9, .image_4{
+    margin-left: -60px;
+    width: 300px;
+  }
+  .title{
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width:380px){
+  .hamburger-menu{
+    margin-left: 5px;
+  }
+  .head{
+    padding-top: 50px;
+    margin-left: -10px;
+    margin-top: -20px;
+  }
+  .subtitle, .title, .soul{
+    margin-left: -50px;
+  }
+  .soul{
+    margin-left: -45px;
+  }
+  .title{
+    font-size: 30px;
+  }
+  .text{
+    margin-left: -30px;
+  }
+  .image_5, .image_8, .image_9, .image_4{
+    margin-left: -90px;
+  }
+  .collage{
+    margin-left: -15px;
+  }
+}
+@media only screen and (max-width:320px){
+  h1, .I_stay, .Lviv{
+    margin-left: 50px;
+  }
+  .the_author{
+    margin-left: -30px;
+  }
+  .image_5, .image_8, .image_9, .image_4{
+    margin-left: -120px;
+  }
+  .collage{
+    margin-left: -43px;
+  }
+
+}

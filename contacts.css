@@ -1,0 +1,276 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color:   rgb(119, 119, 159);
+  width: 100%;
+}
+.hamburger-menu{
+  display: none;
+}
+#menu_toogle{
+  opacity: 0;
+}
+.menu_btn{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu_btn>span,
+.menu_btn>span::before,
+.menu_btn>span::after{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu_btn>span::before{
+  content: ' ';
+  top:-8px;
+}
+.menu_btn>span::after{
+  content: ' ';
+  top:8px;
+}
+.menu_box{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #e6e3ed;
+  box-shadow: 1px 0px 6px rgb(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+.menu_item{
+  display: block;
+  padding: 12px 24px;
+  color: rgb(12, 12, 12);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu_item :hover{
+  background-color: #273451;
+}
+#menu_toggle:checked~.menu_btn>span{
+  transform: rotate(45deg);
+}
+#menu_toggle:checked~.menu_btn>span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu_toggle:checked~.menu_btn>span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu_toggle:checked~.menu_box{
+  visibility: visible;
+  left: 0;
+}
+
+
+.information{
+  text-align: center;
+  margin-top: 40px;
+}
+.block_1{
+  font-size: 18px;
+  margin-top: 40px;
+  display: flex;
+  margin-left: 60px;
+}
+.contatacts{
+  background-color:  rgb(100, 100, 137);
+  padding-left:10px;
+  padding-right: 10px;
+  padding-bottom: 100px;
+  display: block;
+  border: rgb(142, 142, 193) 2px solid;
+}
+img{
+  padding-left: 600px;
+}
+img:hover{
+  border-radius: 30%;
+}
+.constasts__link{
+  color: #000;
+  text-decoration: none;
+}
+.constasts__link:hover{
+  background-color: #fff;
+  font-size: 20px;
+}
+.map{
+  margin:  5% 30% 0% 28%;
+  padding-bottom: 80px;
+}
+
+
+
+
+
+
+.footer{
+  background-color: rgb(78, 77, 77);
+  padding-top: 40px;
+  padding-left: 55px;
+  margin-bottom: -18px;
+  margin-left: -10px;
+}
+.my{
+  margin-bottom: 50px;
+}
+.most{
+  
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  padding-bottom: 20px;
+}
+
+.protection{
+  margin-top: 80px;
+  margin-left: 80%;
+  font-size: large;
+  padding-bottom: 15px;
+}
+@media only screen and (max-width:1200px){
+  img{
+    margin-left: -300px;
+  }
+  .protection{
+    margin-left: 70%;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .hamburger-menu{
+    display: block;
+  }
+  .contatacts{
+    margin-left: -40px;
+  }
+  img{
+    margin-left: -560px;
+  }
+  .protection{
+    margin-left: 60%;
+  }
+ .dani1{
+  margin-bottom: 20px;
+ }
+ .map{
+  margin-left: 10px;
+  width: 700px;
+ }
+}
+
+@media only screen and (max-width:480px){
+  img{
+    margin-top: 80px;
+    margin-left: -585px;
+    height: auto;
+    width: 400px;
+  }
+  .contatacts, .block_1{
+    display: grid;
+    margin-left: 10px;
+  }
+
+  .gender, label{
+    margin-left: 5px;
+  }
+  .dani1{
+    margin-left: -2px;
+    margin-bottom: 20px;
+  }
+  #name{
+    margin-left: 80px;
+  }
+ 
+  #lastname{
+    margin-right: -10px;
+  }
+  
+  .map{
+  width: 365px;
+  }
+  .subject{
+  margin-left: 5px;
+  }
+  form{
+  text-align: justify;
+  margin-left: 5px;
+  }
+  textarea{
+  height:200px; 
+  width: 300px;
+  }
+  button{
+  margin-left: 2px;
+  }
+  .protection{
+  margin-left: 50%;
+  }
+ .my, .most, .protection{
+  font-size: 16px;
+  }
+}
+@media only screen and (max-width:380px){
+  .block_1{
+    margin-left: 5px;
+  }
+  img{
+    width: 350px;
+  }
+  .map{
+    margin-left: 0px;
+    width: 350px;
+  }
+}
+ 
+ @media only screen and (max-width:320px){
+  img{
+    width: 300px;
+  }
+ 
+  #name{
+    margin-left: 65px;
+  }
+  textarea{
+    height:200px; 
+    width: 250px;
+    }
+  #gender1{
+    margin-left: 5px;
+  }
+  .protection{
+    margin-left: 40%;
+  }
+  .my, .most, .protection{
+    font-size: 16px;
+  }
+  .my, .most{
+    margin-left: -20px;
+  }
+  .map{
+    width: 290px;
+  }
+}
